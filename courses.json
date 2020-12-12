@@ -1,0 +1,377 @@
+[
+    {
+        "semester" : "Spring_2020",
+        "courses" : [
+            {
+                "dept" : "CSCI",
+                "course_id" : "476",
+                "course_name" : "Parallel Programming",
+                "instructor" : "William Killian",
+                "course_page" : "http://cs.millersville.edu/~wkillian/",
+                "start_time" : "01:00PM",
+                "end_time" : "02:00PM",
+                "days" : "-M---F-",
+                "zoom_url" : "https://millersville.zoom.us/j/977529949",
+                "color" : "#8888CC"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "476",
+                "course_name" : "Parallel Programming",
+                "instructor" : "William Killian",
+                "course_page" : "http://cs.millersville.edu/~wkillian/",
+                "start_time" : "01:00PM",
+                "end_time" : "03:00PM",
+                "days" : "----R--",
+                "zoom_url" : "https://millersville.zoom.us/j/475160260",
+                "color" : "#8888CC"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "380",
+                "course_name" : "Operating Systems",
+                "instructor" : "Gary Zoppetti",
+                "course_page" : "http://cs.millersville.edu/~gzoppetti/380/",
+                "start_time" : "03:00PM",
+                "end_time" : "04:00PM",
+                "days" : "-M---F-",
+                "zoom_url" : "https://millersville.zoom.us/j/634848292",
+                "color" : "#EEEE77"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "380",
+                "course_name" : "Operating Systems",
+                "instructor" : "Gary Zoppetti",
+                "course_page" : "http://cs.millersville.edu/~gzoppetti/380/",
+                "start_time" : "03:00PM",
+                "end_time" : "05:00PM",
+                "days" : "----R--",
+                "zoom_url" : "https://millersville.zoom.us/j/634848292",
+                "color" : "#EEEE77"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "366",
+                "course_name" : "Database and Web Development",
+                "instructor" : "Chad Hogg",
+                "course_page" : "https://millersville.desire2learn.com/d2l/home/2827638",
+                "start_time" : "08:00AM",
+                "end_time" : "09:00AM",
+                "days" : "-M---F-",
+                "zoom_url" : "",
+                "color" : "#EE7799"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "366",
+                "course_name" : "Database and Web Development",
+                "instructor" : "Chad Hogg",
+                "course_page" : "https://millersville.desire2learn.com/d2l/home/2827638",
+                "start_time" : "08:00AM",
+                "end_time" : "10:00AM",
+                "days" : "--T----",
+                "zoom_url" : "",
+                "color" : "#EE7799"
+            },
+            {
+                "dept" : "ITEC",
+                "course_id" : "302",
+                "course_name" : "Futurology",
+                "instructor" : "David Barry",
+                "course_page" : "https://millersville.desire2learn.com/d2l/home/2818069",
+                "start_time" : "11:00AM",
+                "end_time" : "12:15PM",
+                "days" : "-M-W---",
+                "zoom_url" : "",
+                "color" : "#AADDAA"
+            },
+            {
+                "dept" : "",
+                "course_id" : "",
+                "course_name" : "Coding Club",
+                "instructor" : "",
+                "course_page" : "https://open.kattis.com",
+                "start_time" : "12:10PM",
+                "end_time" : "01:00PM",
+                "days" : "----R--",
+                "zoom_url" : "",
+                "color" : "#CCCCCC"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "362",
+                "course_name" : "Tutoring w/ Manu",
+                "instructor" : "",
+                "course_page" : "",
+                "start_time" : "12:00PM",
+                "end_time" : "01:00PM",
+                "days" : "--T----",
+                "zoom_url" : "https://millersville.zoom.us/j/6192331388",
+                "color" : "#CCCCFF"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "162",
+                "course_name" : "Tutoring w/ Jaclyn",
+                "instructor" : "",
+                "course_page" : "",
+                "start_time" : "10:00AM",
+                "end_time" : "11:00AM",
+                "days" : "-----F-",
+                "zoom_url" : "https://millersville.zoom.us/j/6192331388",
+                "color" : "#FFCCCC"
+            }
+        ]
+    },
+    {
+        "semester" : "Fall_2020",
+        "courses" : [
+            {
+                "dept" : "CSCI",
+                "course_id" : "375",
+                "course_name" : "Computer Graphics - Async",
+                "instructor" : "Chad Hogg",
+                "course_page" : "",
+                "start_time" : "1:00PM",
+                "end_time" : "01:50PM",
+                "days" : "-M-----",
+                "zoom_url" : "",
+                "color" : "#77DD77"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "375",
+                "course_name" : "Computer Graphics - Meeting",
+                "instructor" : "Chad Hogg",
+                "course_page" : "",
+                "start_time" : "1:00PM",
+                "end_time" : "01:50PM",
+                "days" : "-----F-",
+                "zoom_url" : "",
+                "color" : "#77DD77"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "375",
+                "course_name" : "Computer Graphics - Lab Async",
+                "instructor" : "Chad Hogg",
+                "course_page" : "",
+                "start_time" : "01:10PM",
+                "end_time" : "03:00PM",
+                "days" : "--T----",
+                "zoom_url" : "",
+                "color" : "#77DD77"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "420",
+                "course_name" : "Software Engineering",
+                "instructor" : "William Killian",
+                "course_page" : "http://cs.millersville.edu/~wkillian/",
+                "start_time" : "12:00PM",
+                "end_time" : "12:50PM",
+                "days" : "-M---F-",
+                "zoom_url" : "https://millersville.zoom.us/j/93762121820",
+                "color" : "#7777DD"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "420",
+                "course_name" : "Software Engineering Lab",
+                "instructor" : "William Killian",
+                "course_page" : "http://cs.millersville.edu/~wkillian/",
+                "start_time" : "12:00PM",
+                "end_time" : "01:50PM",
+                "days" : "---W---",
+                "zoom_url" : "https://millersville.zoom.us/j/92113098172",
+                "color" : "#7777DD"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "450",
+                "course_name" : "Artificial Intelligence",
+                "instructor" : "Stephanie Schwartz",
+                "course_page" : "",
+                "start_time" : "10:00AM",
+                "end_time" : "11:50AM",
+                "days" : "--T-R--",
+                "zoom_url" : "https://millersville.zoom.us/j/97581610822",
+                "color" : "#9977DD"
+            },
+            {
+                "dept" : "PHIL",
+                "course_id" : "100",
+                "course_name" : "Intro to Philosophy",
+                "instructor" : "John Kaiser Ortiz",
+                "course_page" : "",
+                "start_time" : "",
+                "end_time" : "",
+                "days" : "-------",
+                "zoom_url" : "",
+                "color" : "#DDDD77"
+            },
+            {
+                "dept" : "",
+                "course_id" : "",
+                "course_name" : "Coding Club",
+                "instructor" : "",
+                "course_page" : "https://open.kattis.com",
+                "start_time" : "12:00PM",
+                "end_time" : "01:00PM",
+                "days" : "----R--",
+                "zoom_url" : "",
+                "color" : "#CCCCCC"
+            },
+            {
+                "dept" : "",
+                "course_id" : "",
+                "course_name" : "Meet with Dr. Killian",
+                "instructor" : "",
+                "course_page" : "",
+                "start_time" : "01:00PM",
+                "end_time" : "02:00PM",
+                "days" : "----R--",
+                "zoom_url" : "",
+                "color" : "#EE99EE"
+            },
+            {
+                "dept" : "",
+                "course_id" : "",
+                "course_name" : "Tutoring with Evelyn",
+                "instructor" : "",
+                "course_page" : "",
+                "start_time" : "06:00PM",
+                "end_time" : "08:00PM",
+                "days" : "----R--",
+                "zoom_url" : "",
+                "color" : "#F9F999"
+            },
+            {
+                "dept" : "",
+                "course_id" : "",
+                "course_name" : "Tutoring with Evelyn",
+                "instructor" : "",
+                "course_page" : "",
+                "start_time" : "05:00PM",
+                "end_time" : "06:00PM",
+                "days" : "-M-----",
+                "zoom_url" : "",
+                "color" : "#F9F999"
+            }
+        ]
+    },
+    {
+        "semester" : "Spring_2021",
+        "courses" : [
+            {
+                "dept" : "CSCI",
+                "course_id" : "475",
+                "course_name" : "3D Game Programming",
+                "instructor" : "Chris Cain",
+                "course_page" : "",
+                "start_time" : "08:00AM",
+                "end_time" : "08:50AM",
+                "days" : "-M---F-",
+                "zoom_url" : "",
+                "color" : "#88CC88"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "475",
+                "course_name" : "3D Game Programming Lab",
+                "instructor" : "Chris Cain",
+                "course_page" : "",
+                "start_time" : "08:00AM",
+                "end_time" : "09:50AM",
+                "days" : "---W---",
+                "zoom_url" : "",
+                "color" : "#88CC88"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "435",
+                "course_name" : "Compiler Construction",
+                "instructor" : "Gary Zoppetti",
+                "course_page" : "",
+                "start_time" : "12:00PM",
+                "end_time" : "12:50PM",
+                "days" : "-M---F-",
+                "zoom_url" : "https://millersville.zoom.us/j/634848292",
+                "color" : "#EEEE77"
+            },
+            {
+                "dept" : "CSCI",
+                "course_id" : "435",
+                "course_name" : "Compiler Construction",
+                "instructor" : "Gary Zoppetti",
+                "course_page" : "",
+                "start_time" : "12:00PM",
+                "end_time" : "01:50PM",
+                "days" : "---W---",
+                "zoom_url" : "",
+                "color" : "#EEEE77"
+            },
+            {
+                "dept" : "ESCI",
+                "course_id" : "102",
+                "course_name" : "Origin and Evoltn of the Earth Optional",
+                "instructor" : "L Marquez",
+                "course_page" : "",
+                "start_time" : "04:00PM",
+                "end_time" : "04:50PM",
+                "days" : "---w---",
+                "zoom_url" : "",
+                "color" : "#CCCC33"
+            },
+            {
+                "dept" : "ESCI",
+                "course_id" : "102",
+                "course_name" : "Origin and Evoltn of the Earth",
+                "instructor" : "L Marquez",
+                "course_page" : "",
+                "start_time" : "",
+                "end_time" : "",
+                "days" : "-------",
+                "zoom_url" : "",
+                "color" : "#eeeeee"
+            },
+            {
+                "dept" : "GEOG",
+                "course_id" : "226",
+                "course_name" : "Political Geography",
+                "instructor" : "Derek Shanahan",
+                "course_page" : "",
+                "start_time" : "",
+                "end_time" : "",
+                "days" : "-------",
+                "zoom_url" : "",
+                "color" : "#eeeeee"
+            },
+            {
+                "dept" : "GEOG",
+                "course_id" : "226",
+                "course_name" : "Political Geography",
+                "instructor" : "Derek Shanahan",
+                "course_page" : "",
+                "start_time" : "",
+                "end_time" : "",
+                "days" : "-------",
+                "zoom_url" : "",
+                "color" : "#eeeeee"
+            },
+            {
+                "dept" : "",
+                "course_id" : "",
+                "course_name" : "Coding Club",
+                "instructor" : "",
+                "course_page" : "https://open.kattis.com",
+                "start_time" : "12:10PM",
+                "end_time" : "01:00PM",
+                "days" : "----R--",
+                "zoom_url" : "",
+                "color" : "#CCCCCC"
+            }
+        ]
+    }
+] 
