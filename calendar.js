@@ -1,15 +1,140 @@
 // My Course Info Website
 // By Amy Burnett
 
-window.onload = function () {
+// =======================================================================
 
+function setSchedule (schedule) {
+    $("#schedule-container").html(getScheduleHTML(schedule));
+}
+
+// =======================================================================
+
+function getScheduleHTML (schedule)
+{
+    var html = `<table id="schedule">
+        <tr>
+            <th>Color</th>
+            <th>Dept</th>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Instructor</th>
+            <th>Days</th>
+            <th>Times</th>
+            <th>Zoom Url</th>
+        </tr>`;
+    // add each course
+    for (var i = 0 ; i < schedule["courses"].length; ++i) {
+        var course = schedule["courses"][i];
+        html += 
+            `<tr>
+                <td>
+                    <div style="width:50px;height:50px;background-color: ${course["color"]}"></div>
+                </td>
+                <td>${course["dept"]}</td>
+                <td>${course["course_id"]}</td>`;
+        if (course["course_page"] != "") {
+            html += `<td><a href="${course["course_page"]}">${course["course_name"]}</a></td>`;
+        } else {
+            html += `<td>${course["course_name"]}</td>`;
+        }
+        html += `<td>${course["instructor"]}</td>
+            <td>${course["days"]}</td>
+            <td>${course["start_time"]}-${course["end_time"]}</td>
+            <td><a href="${course["zoom_url"]}">${course["zoom_url"]}</a></td>
+        </tr>`;
+    }   
+    
+    html += `</table>`;
+
+    return html;
+}
+
+// =======================================================================
+
+// set schedule options
+function setScheduleOptions(schedules, current_semester) {
+    html = ""
+    for (var i = 0; i < schedules.length; ++i) {
+        var schedule = schedules[i];
+        if (schedule["semester"] == current_semester) {
+            html += `<option value="${schedule["semester"]}" selected>${schedule["semester"]}</option>`;
+        } else {
+            html += `<option value="${schedule["semester"]}">${schedule["semester"]}</option>`;
+        }
+    }
+    $("#semester-select").html(html);
+}
+
+// =======================================================================
+
+function setScheduleName (schedule_name) {
+    $("#schedule-title").html(schedule_name);
+}
+
+// =======================================================================
+
+function setupCalendar () {
+
+    // # determine start time for day and end time 
+    // # eh maybe later 
+    // # statically define start and end times
+    var calendar_start = 8; //# 8:00 am
+    var calendar_end = 20;  //# 8:00 pm 
+    var calendar_length = calendar_end - calendar_start;
+
+    // # place calendar 
+    html = `<table id="calendar">`
+
+    html += get_calendar_row (-1, -1, "Amy", ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday"]);
+    for (var i = 0; i < calendar_length; i++) {
+        html += get_calendar_row (calendar_start + i, 0, (calendar_start + i) % 12 + ":00");
+        html += get_calendar_row (calendar_start + i, 1, (calendar_start + i) % 12 + ":15");
+        html += get_calendar_row (calendar_start + i, 2, (calendar_start + i) % 12 + ":30");
+        html += get_calendar_row (calendar_start + i, 3, (calendar_start + i) % 12 + ":45");
+    }
+    html += `</table>`;
+
+    $("#calendar-container").html(html);
+}
+
+// =======================================================================
+
+function get_calendar_row (index, min_mark, row_label, content = ["","","","","","",""]) {
+    return `
+        <tr>
+            <th class="row_head">${row_label}</th>
+            <td id="td${index}_${min_mark}_0">${content[0]}</td>
+            <td id="td${index}_${min_mark}_1">${content[1]}</td>
+            <td id="td${index}_${min_mark}_2">${content[2]}</td>
+            <td id="td${index}_${min_mark}_3">${content[3]}</td>
+            <td id="td${index}_${min_mark}_4">${content[4]}</td>
+            <td id="td${index}_${min_mark}_5">${content[5]}</td>
+            <td id="td${index}_${min_mark}_6">${content[6]}</td>
+        </tr>
+    `;
+
+}
+
+// =======================================================================
+
+function getCurrentSchedule (schedules, given_semester) {
+    for (var i = 0; i < schedules.length; ++i) {
+        if (schedules[i]["semester"] == given_semester) {
+            return schedules[i];
+        }
+    }
+    // otherwise return the last schedule
+    return schedules[schedules.length-1];
+}
+
+// =======================================================================
+
+function fillCalendar (current_schedule) {
     // add courses to calendar 
     // foreach course 
-    for (var i = 0; i < data.courses.length; i++) {
-
-
+    for (var i = 0; i < current_schedule.courses.length; i++) {
         // parse starting time 
-        start_time_str = data.courses[i].start_time
+        start_time_str = current_schedule.courses[i]["start_time"]
         start_time = -1;
         if (start_time_str != "" && start_time_str != "TBD") {
             start_time = parseInt(start_time_str.substring(0,2));
@@ -36,7 +161,7 @@ window.onload = function () {
         }
 
         // parse ending time 
-        end_time_str = data.courses[i].end_time;
+        end_time_str = current_schedule.courses[i]["end_time"];
         end_time = -1;
         if (end_time_str != "" && end_time_str != "TBD") {
             end_time = parseInt(end_time_str.substring(0,2));
@@ -70,7 +195,7 @@ window.onload = function () {
         console.log (end_time)
 
         // find days for course/event 
-        days_str = data.courses[i].days;
+        days_str = current_schedule.courses[i]["days"];
         // S,M,T,W,R,F,S
         days = [0,0,0,0,0,0,0];
         has_day = false; 
@@ -101,19 +226,19 @@ window.onload = function () {
                         console.log(id);
                         var block = document.getElementById(id);
                         // color block 
-                        block.style.backgroundColor = data.courses[i].color;
+                        block.style.backgroundColor = current_schedule.courses[i].color;
                         if (t < end_time - 0.25)
-                            block.style.borderBottomColor = data.courses[i].color;
+                            block.style.borderBottomColor = current_schedule.courses[i].color;
                         // put text on first block
                         if (first) {
-                            if (data.courses[i].dept != "")
-                                block.innerHTML += data.courses[i].dept + data.courses[i].course_id;
+                            if (current_schedule.courses[i].dept != "")
+                                block.innerHTML += current_schedule.courses[i].dept + current_schedule.courses[i].course_id;
                         }
                         if (second) {
-                            block.innerHTML += data.courses[i].course_name;
+                            block.innerHTML += current_schedule.courses[i].course_name;
                         }
                         if (third) {
-                            block.innerHTML += data.courses[i].start_time + " " + data.courses[i].end_time;
+                            block.innerHTML += current_schedule.courses[i].start_time + " " + current_schedule.courses[i].end_time;
                         }
                     }
                 }
@@ -129,3 +254,49 @@ window.onload = function () {
 
     }
 }
+
+// =======================================================================
+
+// setup webpage on load 
+window.onload = function () {
+
+    // load data file
+    var filename = "courses.json";
+    var schedules = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // parse server data and save 
+            schedules = JSON.parse(this.responseText);
+        }
+    };
+    // false to process synchronously 
+    xmlhttp.open("GET", filename, false);
+    xmlhttp.send();
+
+    console.log(schedules);
+
+    var current_schedule = null;
+
+    // get current schedule name from GET parameter
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    // if it is provided
+    if (urlParams.has("semester")) {
+        current_schedule = getCurrentSchedule(schedules, urlParams.get("semester"));
+    }
+    // no semester provided
+    else {
+        current_schedule = schedules[schedules.length-1];
+    }
+
+    setScheduleName(current_schedule["semester"]);
+    setScheduleOptions(schedules, current_schedule["semester"]);
+    setupCalendar();
+    fillCalendar(current_schedule);
+    setSchedule(current_schedule);
+
+}
+
+// =======================================================================
+

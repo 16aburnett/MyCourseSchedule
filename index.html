@@ -1,0 +1,33 @@
+<!--
+    My Course Info Website
+    By Amy Burnett
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Amy's Course Info</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="calendar.js"></script>
+    </head>
+    <body>
+        <form>
+            <label>Schedule</label>
+            <select id="semester-select" name="semester">
+                <!-- Schedule options go here -->
+            </select>
+            <input type="submit" value="Grab Schedule">
+        </form>
+        <div id="desc">
+            <h1>Amy Burnett</h1>
+            <h2 id="schedule-title"></h2>
+        </div>
+        <div id="calendar-container">
+            <!-- Calendar loaded here -->
+        </div>
+        <div id="schedule-container">
+            <!-- Schedule loaded here -->
+        </div>
+    </body>
+</html>
